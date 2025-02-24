@@ -13,6 +13,30 @@ const FoodEntry = ({ onAddFood }) => {
       setFoodName('') // Reset input value
     }
   }
+
+  return (
+    <form className="formFood" onSubmit={handleSubmit}>
+      <label>
+        Food Name
+        <input
+          type="text"
+          value={foodName}
+          onChange={(e) => setFoodName(e.target.value)}
+          placeholder="Enter food name"
+        />
+      </label>
+      <label>
+        Calories
+        <input
+          type="number"
+          value={calories}
+          onChange={(e) => setCalories(e.target.value)}
+          placeholder="Enter calories"
+        />
+      </label>
+      <button>Add Food</button>
+    </form>
+  )
 }
 
 export default FoodEntry
