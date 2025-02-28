@@ -17,6 +17,7 @@ const App = () => {
       <FoodEntry onAddFood={handleAddFood} />
       <CalorieSummary foods={foods} />
 
+    {foods.length !== 0 ? (
       <div className="food-container">
         <h2>Food List</h2>
         <ul>
@@ -27,6 +28,9 @@ const App = () => {
           ))}
         </ul>
       </div>
+    ) : (
+      <p>No foods!</p>
+    )}
     </div>
   )
 }
