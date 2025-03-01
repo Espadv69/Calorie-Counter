@@ -29,7 +29,7 @@ const App = () => {
   }, [goal])
 
   const handleAddFood = (newFood) => {
-    setFoods([...foods, newFood]) // Update food data
+    setFoods([...foods, newFood])
   }
 
   const handleDeleteFood = (index) => {
@@ -46,6 +46,10 @@ const App = () => {
     )
     setFoods(updatedFoods)
     setEditingIndex(null)
+  }
+
+  const handleSetGoal = (newGoal) => {
+    setGoal(newGoal)
   }
 
   const totalCalories = foods.reduce((sum, food) => sum + food.calories, 0)
