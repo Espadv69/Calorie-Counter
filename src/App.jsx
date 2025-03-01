@@ -108,6 +108,7 @@ const App = () => {
       ) : (
         <p>No foods!</p>
       )}
+      <Notification message={notification} onClose={closeNotification} />
     </div>
   )
 }
