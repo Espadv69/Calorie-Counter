@@ -7,7 +7,7 @@ const GoalSetter = ({ totalCalories }) => {
     setGoal(Number(e.target.value))
   }
 
-  const getTotalStatus = () => {
+  const getGoalStatus = () => {
     if (totalCalories < goal) {
       return `You have ${
         goal - totalCalories
@@ -18,6 +18,24 @@ const GoalSetter = ({ totalCalories }) => {
       return `You have exceeded your goal by ${totalCalories - goal} calories.`
     }
   }
+
+  return (
+    <div className="goalSetter">
+      <h2>Set Your Daily Calorie Goal</h2>
+      <div className="form-goal">
+        <label>
+          Daily Goal:
+          <input
+            type="text"
+            value={goal}
+            onChange={handleGoalChange}
+            placeholder="Enter your daily calorie goal"
+          />
+        </label>
+      </div>
+      <p>{getGoalStatus()}</p>
+    </div>
+  )
 }
 
 export default GoalSetter
