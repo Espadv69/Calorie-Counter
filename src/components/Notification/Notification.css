@@ -1,5 +1,5 @@
 .notification {
-  padding: 10px;
+  padding: 1rem;
 
   position: fixed;
   bottom: 20px;
@@ -9,5 +9,17 @@
 
   color: white;
   background-color: #4CAF50;
+
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn .5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
