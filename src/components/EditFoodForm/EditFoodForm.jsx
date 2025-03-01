@@ -7,7 +7,19 @@ const EditFoodForm = ({ food, onSave, onCancel }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if (!foodName.trim() || /\d/.test(foodName)) {
+      setError('Please enter a valid food name without numbers.')
+      return
+    }
+
+    if (!calories || isNaN(calories) || calories < 0) {
+      setError('Please enter a valid number of calories (positive number).')
+      return
+    }
+
     onSave({ foodName, calories: Number(calories) })
+    setError('')
   }
 
   return (
