@@ -6,6 +6,9 @@ import CalorieSummary from './components/CalorieSummary/CalorieSummary'
 import GoalSetter from './components/GoalSetter/GoalSetter'
 import EditFoodForm from './components/EditFoodForm/EditFoodForm'
 
+const LOCAL_STORAGE_FOODS_KEY = 'calorieCounter.foods'
+const LOCAL_STORAGE_GOAL_KEY = 'calorieCounter.goal'
+
 const App = () => {
   const [foods, setFoods] = useState([]) // State to store food data
   const [editingIndex, setEditingIndex] = useState(null)
@@ -24,7 +27,7 @@ const App = () => {
 
   const handleEditFood = (index, updatedFood) => {
     const updatedFoods = foods.map((food, i) =>
-      i === index ? updatedFood : food,
+      i === index ? updatedFood : food
     )
     setFoods(updatedFoods)
     setEditingIndex(null)
