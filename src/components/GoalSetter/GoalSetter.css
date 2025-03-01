@@ -52,3 +52,13 @@
   color: red;
   font-size: 0.9rem;
 }
+
+@media (max-width: 600px) {
+  .goal-setter h2 {
+    font-size: 1.2rem;
+  }
+
+  .goal-setter input {
+    width: 100%;
+  }
+}
