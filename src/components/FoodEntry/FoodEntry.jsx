@@ -45,6 +45,7 @@ const FoodEntry = ({ onAddFood }) => {
           placeholder="Enter calories"
         />
       </label>
+      {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
       <button>Add Food</button>
     </form>
   )
