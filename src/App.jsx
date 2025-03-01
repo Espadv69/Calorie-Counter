@@ -20,6 +20,10 @@ const App = () => {
   })
   const [editingIndex, setEditingIndex] = useState(null)
 
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_FOODS_KEY, JSON.stringify(foods))
+  }, [foods])
+
   const handleAddFood = (newFood) => {
     setFoods([...foods, newFood]) // Update food data
   }
