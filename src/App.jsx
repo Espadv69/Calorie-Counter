@@ -33,6 +33,7 @@ const App = () => {
             {foods.map((food, index) => (
               <li key={index}>
                 {food.foodName} - {food.calories} calories
+                <button onClick={() => handleDeleteFood(index)}>Delete</button>
               </li>
             ))}
           </ul>
