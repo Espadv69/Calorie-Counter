@@ -59,7 +59,11 @@ const App = () => {
       <Header />
       <FoodEntry onAddFood={handleAddFood} />
       <CalorieSummary foods={foods} />
-      <GoalSetter totalCalories={totalCalories} />
+      <GoalSetter
+        goal={goal}
+        onSetGoal={handleSetGoal}
+        totalCalories={totalCalories}
+      />
 
       {foods.length !== 0 ? (
         <div className="food-container">
