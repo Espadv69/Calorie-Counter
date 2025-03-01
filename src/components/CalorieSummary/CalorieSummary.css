@@ -1,0 +1,14 @@
+.calorie-summary {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.calorie-summary h2 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.calorie-summary p {
+  font-size: 1.2rem;
+  opacity: .8;
+}
