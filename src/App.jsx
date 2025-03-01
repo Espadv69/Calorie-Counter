@@ -5,6 +5,7 @@ import FoodEntry from './components/FoodEntry/FoodEntry'
 import CalorieSummary from './components/CalorieSummary/CalorieSummary'
 import GoalSetter from './components/GoalSetter/GoalSetter'
 import EditFoodForm from './components/EditFoodForm/EditFoodForm'
+import Notification from './components/Notification/Notification'
 
 const LOCAL_STORAGE_FOODS_KEY = 'calorieCounter.foods'
 const LOCAL_STORAGE_GOAL_KEY = 'calorieCounter.goal'
