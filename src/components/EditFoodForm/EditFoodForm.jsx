@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-const EditFoodForm = () => {
-  const [foodName, setFoodName] = useState('')
-  const [calories, setCalories] = useState('')
+const EditFoodForm = ({ food, onSave, onCancel }) => {
+  const [foodName, setFoodName] = useState(food.foodName)
+  const [calories, setCalories] = useState(food.calories)
 }
 
 export default EditFoodForm
