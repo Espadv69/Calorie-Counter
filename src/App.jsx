@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import FoodEntry from './components/FoodEntry/FoodEntry'
 import CalorieSummary from './components/CalorieSummary/CalorieSummary'
 import GoalSetter from './components/GoalSetter/GoalSetter'
+import EditFoodForm from './components/EditFoodForm/EditFoodForm'
 
 const App = () => {
   const [foods, setFoods] = useState([]) // State to store food data
@@ -44,8 +45,21 @@ const App = () => {
           <ul>
             {foods.map((food, index) => (
               <li key={index}>
-                {food.foodName} - {food.calories} calories
-                <button onClick={() => handleDeleteFood(index)}>Delete</button>
+                {editingIndex === index ? (
+                  <EditFoodForm
+                    food={food}
+                    onSave={(updatedFood) => handleEditFood(index, updatedFood)}
+                    onCancel={() => setEditingIndex(null)}
+                  />
+                ) : (
+                  <>
+                    {food.foodName} - {food.calories} calories
+                    <button onClick={() => setEditingIndex(index)}>Edit</button>
+                    <button onClick={() => handleDeleteFood(index)}>
+                      Delete
+                    </button>
+                  </>
+                )}
               </li>
             ))}
           </ul>
