@@ -21,6 +21,14 @@ const App = () => {
     }
   }
 
+  const handleEditFood = (index, updatedFood) => {
+    const updatedFoods = foods.map((food, i) =>
+      i === index ? updatedFood : food
+    )
+    setFoods(updatedFoods)
+    setEditingIndex(null)
+  }
+
   const totalCalories = foods.reduce((sum, food) => sum + food.calories, 0)
 
   return (
