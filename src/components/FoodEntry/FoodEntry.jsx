@@ -9,8 +9,8 @@ const FoodEntry = ({ onAddFood }) => {
   const handleSubmit = (e) => {
     e.preventDefault() // Prevent form submission
 
-    if (!foodName.trim()) {
-      setError('Please enter a food name.')
+    if (!foodName.trim() || /\d/.test(foodName)) {
+      setError('Please enter a valid food name without numbers.')
       return
     }
 
@@ -45,8 +45,8 @@ const FoodEntry = ({ onAddFood }) => {
           placeholder="Enter calories"
         />
       </label>
-      {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
       <button>Add Food</button>
+      {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
     </form>
   )
 }
