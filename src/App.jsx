@@ -51,6 +51,7 @@ const App = () => {
     )
     setFoods(updatedFoods)
     setEditingIndex(null)
+    showNotification(`Updated: ${updatedFood.foodName}`)
   }
 
   const handleSetGoal = (newGoal) => {
