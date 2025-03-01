@@ -12,6 +12,11 @@ const App = () => {
     setFoods([...foods, newFood]) // Update food data
   }
 
+  const handleDeleteFood = (index) => {
+    const updatedFoods = foods.filter((_, i) => i !== index)
+    setFoods(updatedFoods)
+  }
+
   const totalCalories = foods.reduce((sum, food) => sum + food.calories, 0)
 
   return (
