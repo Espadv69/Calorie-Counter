@@ -37,7 +37,7 @@ const GoalSetter = ({ goal, onSetGoal, totalCalories }) => {
         <label>
           Daily Goal:
           <input
-            type="text"
+            type="number"
             value={newGoal}
             onChange={handleGoalChange}
             placeholder="Enter your daily calorie goal"
@@ -45,6 +45,7 @@ const GoalSetter = ({ goal, onSetGoal, totalCalories }) => {
         </label>
         <button onClick={handleSaveGoal}>Save Goal</button>
       </div>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
       <p>{getGoalStatus()}</p>
     </div>
   )
