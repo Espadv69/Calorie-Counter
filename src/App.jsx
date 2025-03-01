@@ -7,6 +7,7 @@ import GoalSetter from './components/GoalSetter/GoalSetter'
 
 const App = () => {
   const [foods, setFoods] = useState([]) // State to store food data
+  const [editingIndex, setEditingIndex] = useState(null)
 
   const handleAddFood = (newFood) => {
     setFoods([...foods, newFood]) // Update food data
