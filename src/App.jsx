@@ -24,6 +24,10 @@ const App = () => {
     localStorage.setItem(LOCAL_STORAGE_FOODS_KEY, JSON.stringify(foods))
   }, [foods])
 
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_GOAL_KEY, goal)
+  }, [goal])
+
   const handleAddFood = (newFood) => {
     setFoods([...foods, newFood]) // Update food data
   }
