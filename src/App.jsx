@@ -24,7 +24,7 @@ const App = () => {
 
   const handleEditFood = (index, updatedFood) => {
     const updatedFoods = foods.map((food, i) =>
-      i === index ? updatedFood : food
+      i === index ? updatedFood : food,
     )
     setFoods(updatedFoods)
     setEditingIndex(null)
