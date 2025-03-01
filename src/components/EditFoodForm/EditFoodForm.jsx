@@ -8,6 +8,33 @@ const EditFoodForm = ({ food, onSave, onCancel }) => {
     e.preventDefault()
     onSave({ foodName, calories: Number(calories) })
   }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Food Name:
+        <input
+          type="text"
+          value={foodName}
+          onChange={(e) => setFoodName(e.target.value)}
+          placeholder="Enter a new Food Name"
+        />
+      </label>
+      <label>
+        Calories:
+        <input
+          type="text"
+          value={calories}
+          onChange={(e) => setCalories(e.target.value)}
+          placeholder="Enter new calories"
+        />
+      </label>
+      <div className="buttons-form">
+        <button>Save</button>
+        <button onClick={onCancel}>Cancel</button>
+      </div>
+    </form>
+  )
 }
 
 export default EditFoodForm
