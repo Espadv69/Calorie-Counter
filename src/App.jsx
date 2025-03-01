@@ -12,11 +12,14 @@ const App = () => {
     setFoods([...foods, newFood]) // Update food data
   }
 
+  const totalCalories = foods.reduce((sum, food) => sum + food.calories, 0)
+
   return (
     <div>
       <Header />
       <FoodEntry onAddFood={handleAddFood} />
       <CalorieSummary foods={foods} />
+      <GoalSetter totalCalories={totalCalories} />
 
       {foods.length !== 0 ? (
         <div className="food-container">
