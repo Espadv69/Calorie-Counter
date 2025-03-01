@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './GoalSetter.css'
 
 const GoalSetter = ({ goal, onSetGoal, totalCalories }) => {
   const [newGoal, setNewGoal] = useState(goal)
