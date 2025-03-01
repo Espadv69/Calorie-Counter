@@ -8,11 +8,21 @@ const FoodEntry = ({ onAddFood }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault() // Prevent form submission
-    if (foodName && calories) {
-      onAddFood({ foodName, calories: Number(calories) }) // Pass data to parent component
-      setCalories('') // Reset input value
-      setFoodName('') // Reset input value
+
+    if (!foodName.trim()) {
+      setError('Please enter a food name.')
+      return
     }
+
+    if (!calories || isNaN(calories) || calories < 0) {
+      setError('Please enter a valid number of calories (positive number).')
+      return
+    }
+
+    onAddFood({ foodName, calories: Number(calories) })
+    setFoodName('')
+    setCalories('')
+    setError('')
   }
 
   return (
