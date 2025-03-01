@@ -31,7 +31,7 @@ const GoalSetter = ({ goal, onSetGoal, totalCalories }) => {
   }
 
   return (
-    <div className="goalSetter">
+    <div className="goal-setter">
       <h2>Set Your Daily Calorie Goal</h2>
       <div className="form-goal">
         <label>
@@ -45,7 +45,7 @@ const GoalSetter = ({ goal, onSetGoal, totalCalories }) => {
         </label>
         <button onClick={handleSaveGoal}>Save Goal</button>
       </div>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
       <p>{getGoalStatus()}</p>
     </div>
   )
