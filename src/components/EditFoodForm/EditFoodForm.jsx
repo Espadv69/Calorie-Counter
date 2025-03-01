@@ -46,6 +46,7 @@ const EditFoodForm = ({ food, onSave, onCancel }) => {
         <button>Save</button>
         <button onClick={onCancel}>Cancel</button>
       </div>
+      {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
     </form>
   )
 }
