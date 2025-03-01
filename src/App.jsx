@@ -7,6 +7,8 @@ import GoalSetter from './components/GoalSetter/GoalSetter'
 import EditFoodForm from './components/EditFoodForm/EditFoodForm'
 import Notification from './components/Notification/Notification'
 
+import './App.css'
+
 const LOCAL_STORAGE_FOODS_KEY = 'calorieCounter.foods'
 const LOCAL_STORAGE_GOAL_KEY = 'calorieCounter.goal'
 
