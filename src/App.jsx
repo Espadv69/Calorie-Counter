@@ -10,7 +10,14 @@ const LOCAL_STORAGE_FOODS_KEY = 'calorieCounter.foods'
 const LOCAL_STORAGE_GOAL_KEY = 'calorieCounter.goal'
 
 const App = () => {
-  const [foods, setFoods] = useState([]) // State to store food data
+  const [foods, setFoods] = useState(() => {
+    const savedFoods = localStorage.getItem(LOCAL_STORAGE_FOODS_KEY)
+    return savedFoods ? JSON.parse(savedFoods) : []
+  })
+  const [goal, setGoal] = useState(() => {
+    const savedGoal = localStorage.getItem(LOCAL_STORAGE_GOAL_KEY)
+    return savedGoal ? Number(savedGoal) : 2000
+  })
   const [editingIndex, setEditingIndex] = useState(null)
 
   const handleAddFood = (newFood) => {
