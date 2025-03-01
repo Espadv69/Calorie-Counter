@@ -1,10 +1,14 @@
 import { useState } from 'react'
 
-const GoalSetter = ({ totalCalories }) => {
-  const [goal, setGoal] = useState(2000)
+const GoalSetter = ({ goal, onSetGoal, totalCalories }) => {
+  const [newGoal, setNewGoal] = useState(goal)
 
   const handleGoalChange = (e) => {
-    setGoal(Number(e.target.value))
+    setNewGoal(Number(e.target.value))
+  }
+
+  const handleSaveGoal = () => {
+    onSetGoal(newGoal)
   }
 
   const getGoalStatus = () => {
@@ -27,11 +31,12 @@ const GoalSetter = ({ totalCalories }) => {
           Daily Goal:
           <input
             type="text"
-            value={goal}
+            value={newGoal}
             onChange={handleGoalChange}
             placeholder="Enter your daily calorie goal"
           />
         </label>
+        <button onClick={handleSaveGoal}>Save Goal</button>
       </div>
       <p>{getGoalStatus()}</p>
     </div>
