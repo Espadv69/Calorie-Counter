@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 const GoalSetter = ({ goal, onSetGoal, totalCalories }) => {
   const [newGoal, setNewGoal] = useState(goal)
+  const [error, setError] = useState('')
 
   const handleGoalChange = (e) => {
     setNewGoal(Number(e.target.value))
