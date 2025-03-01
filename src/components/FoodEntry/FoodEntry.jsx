@@ -26,7 +26,7 @@ const FoodEntry = ({ onAddFood }) => {
   }
 
   return (
-    <form className="formFood" onSubmit={handleSubmit}>
+    <form className="food-entry-form" onSubmit={handleSubmit}>
       <label>
         Food Name
         <input
@@ -46,7 +46,7 @@ const FoodEntry = ({ onAddFood }) => {
         />
       </label>
       <button>Add Food</button>
-      {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
     </form>
   )
 }
