@@ -97,10 +97,14 @@ const App = () => {
                 ) : (
                   <>
                     {food.foodName} - {food.calories} calories
-                    <button onClick={() => setEditingIndex(index)}>Edit</button>
-                    <button onClick={() => handleDeleteFood(index)}>
-                      Delete
-                    </button>
+                    <div className="li-buttons">
+                      <button onClick={() => setEditingIndex(index)}>
+                        Edit
+                      </button>
+                      <button onClick={() => handleDeleteFood(index)}>
+                        Delete
+                      </button>
+                    </div>
                   </>
                 )}
               </li>
@@ -108,7 +112,7 @@ const App = () => {
           </ul>
         </div>
       ) : (
-        <p>No foods!</p>
+        <p className="noFoods">No foods!</p>
       )}
       <Notification message={notification} onClose={closeNotification} />
     </div>
