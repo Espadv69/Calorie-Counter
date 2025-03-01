@@ -20,6 +20,7 @@ const App = () => {
     return savedGoal ? Number(savedGoal) : 2000
   })
   const [editingIndex, setEditingIndex] = useState(null)
+  const [notification, setNotification] = useState('')
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_FOODS_KEY, JSON.stringify(foods))
