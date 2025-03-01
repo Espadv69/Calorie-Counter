@@ -38,8 +38,10 @@ const App = () => {
   const handleDeleteFood = (index) => {
     const confirm = window.confirm('Are you sure you want to delete this food?')
     if (confirm) {
+      const deletedFood = foods[index]
       const updatedFoods = foods.filter((_, i) => i !== index)
       setFoods(updatedFoods)
+      showNotification(`Deleted: ${deletedFood.foodName}`)
     }
   }
 
