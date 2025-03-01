@@ -32,6 +32,7 @@ const App = () => {
 
   const handleAddFood = (newFood) => {
     setFoods([...foods, newFood])
+    showNotification(`Added: ${newFood.foodName}`)
   }
 
   const handleDeleteFood = (index) => {
