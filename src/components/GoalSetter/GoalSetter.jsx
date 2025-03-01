@@ -9,7 +9,13 @@ const GoalSetter = ({ goal, onSetGoal, totalCalories }) => {
   }
 
   const handleSaveGoal = () => {
+    if (!newGoal || isNaN(newGoal) || newGoal < 0) {
+      setError('Please enter a valid number of calories (positive number).')
+      return
+    }
+
     onSetGoal(newGoal)
+    setError('')
   }
 
   const getGoalStatus = () => {
