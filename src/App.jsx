@@ -54,6 +54,10 @@ const App = () => {
     setGoal(newGoal)
   }
 
+  const showNotification = (message) => {
+    setNotification(message)
+  }
+
   const totalCalories = foods.reduce((sum, food) => sum + food.calories, 0)
 
   return (
