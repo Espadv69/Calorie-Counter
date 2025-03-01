@@ -56,6 +56,7 @@ const App = () => {
 
   const handleSetGoal = (newGoal) => {
     setGoal(newGoal)
+    showNotification(`Goal updated to ${newGoal} calories`)
   }
 
   const showNotification = (message) => {
