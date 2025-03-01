@@ -13,8 +13,11 @@ const App = () => {
   }
 
   const handleDeleteFood = (index) => {
-    const updatedFoods = foods.filter((_, i) => i !== index)
-    setFoods(updatedFoods)
+    const confirm = window.confirm('Are you sure you want to delete this food?')
+    if (confirm) {
+      const updatedFoods = foods.filter((_, i) => i !== index)
+      setFoods(updatedFoods)
+    }
   }
 
   const totalCalories = foods.reduce((sum, food) => sum + food.calories, 0)
