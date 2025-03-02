@@ -45,6 +45,14 @@ const App = () => {
     setShowConfirmationModal(true)
   }
 
+  const confirmDelete = () => {
+    const deletedFood = foods[foodToDeleteIndex]
+    const updatedFoods = foods.filter((_, i) => i !== foodToDeleteIndex)
+    setFoods(updatedFoods)
+    showNotification(`Deleted: ${deletedFood.foodName}`)
+    setShowConfirmationModal(false)
+  }
+
   const handleEditFood = (index, updatedFood) => {
     const updatedFoods = foods.map((food, i) =>
       i === index ? updatedFood : food
