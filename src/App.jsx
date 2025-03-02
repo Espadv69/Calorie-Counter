@@ -6,6 +6,7 @@ import CalorieSummary from './components/CalorieSummary/CalorieSummary'
 import GoalSetter from './components/GoalSetter/GoalSetter'
 import EditFoodForm from './components/EditFoodForm/EditFoodForm'
 import Notification from './components/Notification/Notification'
+import ConfirmationModal from './components/ConfirmationModal/ConfirmationModal'
 
 import './App.css'
 
