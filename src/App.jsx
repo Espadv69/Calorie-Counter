@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import Header from './components/Header/Header'
 import FoodEntry from './components/FoodEntry/FoodEntry'
