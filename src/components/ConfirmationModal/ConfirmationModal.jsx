@@ -1,5 +1,5 @@
 import './ConfirmationModal.css'
 
-const ConfirmationModal = () => {}
+const ConfirmationModal = ({ message, onConfirm, onCancel }) => {}
 
 export default ConfirmationModal
