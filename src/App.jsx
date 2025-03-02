@@ -97,29 +97,39 @@ const App = () => {
         <div className="food-container">
           <h2>Food List</h2>
           <ul>
-            {foods.map((food, index) => (
-              <li key={index}>
-                {editingIndex === index ? (
-                  <EditFoodForm
-                    food={food}
-                    onSave={(updatedFood) => handleEditFood(index, updatedFood)}
-                    onCancel={() => setEditingIndex(null)}
-                  />
-                ) : (
-                  <>
-                    {food.foodName} - {food.calories} calories
-                    <div className="li-buttons">
-                      <button onClick={() => setEditingIndex(index)}>
-                        Edit
-                      </button>
-                      <button onClick={() => handleDeleteFood(index)}>
-                        Delete
-                      </button>
-                    </div>
-                  </>
-                )}
-              </li>
-            ))}
+            <AnimatePresence>
+              {foods.map((food, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: 20, opacity: 0 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                >
+                  {editingIndex === index ? (
+                    <EditFoodForm
+                      food={food}
+                      onSave={(updatedFood) =>
+                        handleEditFood(index, updatedFood)
+                      }
+                      onCancel={() => setEditingIndex(null)}
+                    />
+                  ) : (
+                    <>
+                      {food.foodName} - {food.calories} calories
+                      <div className="li-buttons">
+                        <button onClick={() => setEditingIndex(index)}>
+                          Edit
+                        </button>
+                        <button onClick={() => handleDeleteFood(index)}>
+                          Delete
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </motion.li>
+              ))}
+            </AnimatePresence>
           </ul>
         </div>
       ) : (
