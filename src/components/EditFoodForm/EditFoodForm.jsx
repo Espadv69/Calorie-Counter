@@ -49,7 +49,7 @@ const EditFoodForm = ({ food, onSave, onCancel }) => {
           Cancel
         </button>
       </div>
-      {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
     </form>
   )
 }
