@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import './Notification.css'
 
 const Notification = ({ message, onClose }) => {
