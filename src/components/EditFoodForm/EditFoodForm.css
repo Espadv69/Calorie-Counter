@@ -67,3 +67,13 @@
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+@media (max-width: 600px) {
+  .edit-food-form {
+    padding: 0.5rem;
+  }
+
+  .edit-food-form button {
+    width: 100%;
+  }
+}
