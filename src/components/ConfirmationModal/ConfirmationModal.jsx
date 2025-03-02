@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from 'framer-motion'
 import './ConfirmationModal.css'
 
 const ConfirmationModal = ({ message, onConfirm, onCancel }) => {
