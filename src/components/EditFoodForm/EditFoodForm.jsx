@@ -23,7 +23,7 @@ const EditFoodForm = ({ food, onSave, onCancel }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="edit-food-form" onSubmit={handleSubmit}>
       <label>
         Food Name:
         <input
