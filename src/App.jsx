@@ -24,6 +24,8 @@ const App = () => {
   })
   const [editingIndex, setEditingIndex] = useState(null)
   const [notification, setNotification] = useState('')
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false)
+  const [foodToDeleteIndex, setFoodToDeleteIndex] = useState(null)
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_FOODS_KEY, JSON.stringify(foods))
