@@ -125,6 +125,13 @@ const App = () => {
         <p className="noFoods">No foods!</p>
       )}
       <Notification message={notification} onClose={closeNotification} />
+      {showConfirmationModal && (
+        <ConfirmationModal
+          message="Are you sure you want to delete this food?"
+          onConfirm={confirmDelete}
+          onCancel={cancelDelete}
+        />
+      )}
     </div>
   )
 }
