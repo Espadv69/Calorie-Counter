@@ -53,6 +53,10 @@ const App = () => {
     setShowConfirmationModal(false)
   }
 
+  const cancelDelete = () => {
+    setShowConfirmationModal(false)
+  }
+
   const handleEditFood = (index, updatedFood) => {
     const updatedFoods = foods.map((food, i) =>
       i === index ? updatedFood : food
