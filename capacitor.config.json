@@ -1,0 +1,5 @@
+{
+  "appId": "com.example.caloriecounter",
+  "appName": "calorie-counter",
+  "webDir": "dist"
+}
