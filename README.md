@@ -38,3 +38,6 @@ A simple and intuitive calorie tracking application built with React. Users can 
   ```bash
   npm run dev
   ```
+
+## Live Demo
+[Link to live demo (https://calorie-counter-esp.netlify.app/)]
