@@ -18,21 +18,21 @@ A simple and intuitive calorie tracking application built with React. Users can 
 ## Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/Espadv69/Calorie-Counter.git
-```
+  ```bash
+  git clone https://github.com/Espadv69/Calorie-Counter.git
+  ```
 
 2. Navigate to the project directory:
-```bash
-cd Calorie-Counter
-```
+  ```bash
+  cd Calorie-Counter
+  ```
 
 3. Install the dependencies:
-```bash
-npm install
-```
+  ```bash
+  npm install
+  ```
 
 4. Start the development server:
-```bash
-npm run dev
-```
+  ```bash
+  npm run dev
+  ```
