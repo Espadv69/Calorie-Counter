@@ -2,6 +2,8 @@
 
 A simple and intuitive calorie tracking application built with React. Users can log their daily food intake, track their calorie consumption, and set daily calorie goals.
 
+![Calorie-Counter](./calorie-screenshot.png)
+
 ## Features
 
 - Add and delete food entries.
